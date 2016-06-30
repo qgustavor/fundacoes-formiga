@@ -250,5 +250,23 @@
       </div>
     </div>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <div id="snackbar-container" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+    <script>
+    var snackbarContainer = document.querySelector('#snackbar-container');
+    document.body.addEventListener('click', function (e,l) {
+      l = e.target;
+      while(l && l.parentNode&&l.nodeName!=='A')l=l.parentNode;
+      if(l.nodeName==='A'){
+        e.preventDefault();
+        new MaterialSnackbar(snackbarContainer).showSnackbar({
+          message: 'Site em construção (?)',
+          timeout: 5000
+        });
+      }
+    });
+    </script>
   </body>
 </html>
