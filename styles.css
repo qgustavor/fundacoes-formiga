@@ -1,0 +1,528 @@
+/** For licence see /LICENCE */
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #ffaa00;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ffaa00;
+  color: #fff;
+}
+
+.formiga-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.formiga-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.formiga-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.formiga-mobile-title {
+  display: none !important;
+}
+
+
+.formiga-logo-image {
+  height: 28px;
+  width: 140px;
+}
+
+
+.formiga-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .formiga-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .formiga-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .formiga-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .formiga-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .formiga-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .formiga-search-box.is-focused + .formiga-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .formiga-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .formiga-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #8bc34a;
+    }
+
+  .formiga-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .formiga-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.formiga-drawer {
+  border-right: none;
+}
+
+  .formiga-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .formiga-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .formiga-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #c38b4a;
+  }
+
+  .formiga-drawer .mdl-layout-title {
+    position: relative;
+    background: #ffaa00;
+    height: 160px;
+  }
+
+    .formiga-drawer .formiga-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.formiga-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/slide01.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.formiga-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.formiga-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.formiga-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .formiga-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.formiga-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.formiga-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.formiga-screen {
+  text-align: center;
+}
+
+.formiga-screen .formiga-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.formiga-image-link {
+  text-decoration: none;
+}
+
+.formiga-soil {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .formiga-soil .formiga-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.formiga-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .formiga-phone .formiga-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.formiga-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .formiga-tablet .formiga-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .formiga-tablet .formiga-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.formiga-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .formiga-tv .formiga-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.formiga-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .formiga-auto .formiga-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.formiga-soil-section {
+  position: relative;
+  background: url('images/soil.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.formiga-soil-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.formiga-soil-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .formiga-soil-band-text p {
+    padding-top: 8px;
+  }
+
+.formiga-link {
+  text-decoration: none;
+  color: #c38b4a !important;
+}
+
+  .formiga-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .formiga-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.formiga-alt-link {
+  text-decoration: none;
+  color: #ffda64 !important;
+  font-size: 16px;
+}
+
+  .formiga-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .formiga-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.formiga-customized-section {
+  text-align: center;
+}
+
+.formiga-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .formiga-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.formiga-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.formiga-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .formiga-more-section .formiga-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.formiga-card-container {
+}
+
+  .formiga-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .formiga-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .formiga-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .formiga-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .formiga-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .formiga-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .formiga-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.formiga-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .formiga-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .formiga-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .formiga-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .formiga-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .formiga-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .formiga-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.formiga-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .formiga-navigation-container {
+    display: none;
+  }
+
+  .formiga-title {
+    display: none !important;
+  }
+
+  .formiga-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .formiga.formiga-search-box.is-focused ~ .formiga-mobile-title,
+  .formiga-search-box.is-focused + .formiga-navigation-container + .formiga-mobile-title {
+    opacity: 0;
+  }
+
+  .formiga-more-button {
+    display: none;
+  }
+
+  .formiga-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .formiga-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .formiga-be-together-section {
+    height: 350px;
+  }
+
+  .formiga-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .formiga-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .formiga-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .formiga-create-character img {
+    height: 12px;
+  }
+
+  .formiga-fab {
+    display: none;
+  }
+
+  .formiga-soil-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .formiga-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
