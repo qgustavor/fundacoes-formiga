@@ -256,13 +256,25 @@
     </div>
     <script>
     var snackbarContainer = document.querySelector('#snackbar-container');
+    var count = 0;
     document.body.addEventListener('click', function (e,l) {
       l = e.target;
-      while(l && l.parentNode&&l.nodeName!=='A')l=l.parentNode;
-      if(l.nodeName==='A'){
+      while(l && l.parentNode && l.nodeName !== 'A') l = l.parentNode;
+      if(l.nodeName === 'A' && l.hash !== '#top' && l.hostname === location.hostname){
         e.preventDefault();
         new MaterialSnackbar(snackbarContainer).showSnackbar({
-          message: 'Site em construção (?)',
+          message: 'Site em construção ' + ([
+            '(?)',
+            '(nenhum link funciona)',
+            '(tudo bem, tem alguns que funcionam)',
+            '(tem um motivo para isso)',
+            '(?)',
+            '(?)',
+            '(?)',
+            '(pensou tivesse terminado, né?)',
+            '(bem, é só isso mesmo)',
+            '(olhe o fim da página)'
+          ][count++] || (count = 0) || '(entendeu agora?)'),
           timeout: 5000
         });
       }
