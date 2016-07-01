@@ -257,7 +257,7 @@
     <script>
     var snackbarContainer = document.querySelector('#snackbar-container');
     var count = 0;
-    document.body.addEventListener('click', function (e,l) {
+    document.body.addEventListener('click', function (e, l) {
       l = e.target;
       while(l && l.parentNode && l.nodeName !== 'A') l = l.parentNode;
       if(l.nodeName === 'A' && l.hash !== '#top' && l.hostname === location.hostname){
@@ -271,8 +271,7 @@
             '(?)',
             '(?)',
             '(?)',
-            '(pensou tivesse terminado, né?)',
-            '(bem, é só isso mesmo)',
+            '(pensou que tivesse terminado, né?)',
             '(olhe o fim da página)'
           ][count++] || (count = 0) || '(entendeu agora?)'),
           timeout: 5000
